@@ -38,7 +38,7 @@
                             </label>
                         </div>
                         <input type="submit" name= "submit_user" class="btn btn-primary">
-                        <button type="button" class="btn btn-light">Cancel</button>
+                        <a href="index.php" class="btn btn-light">Cancel</a>
                     </form>
                 </div>
             </div>

@@ -10,17 +10,17 @@
         $checkAgree = mysqli_real_escape_string($con, $_POST['checkAgree']);
 
         $query = "INSERT INTO registration (Name, Email, Gender ,Mail Status)
-        VALUES ('$name','$email','$gender','$checkAgree')";
+        VALUES ('$name','$email','$gender')";
 
         $query_run = mysqli_query($con, $query);
         if($query_run)
         {
-            header("Location: User-create.php");
+            header("Location: index.php");
             exit(0);
         }
         else
         {
-            header("Location: User-create.php");
+            header("Location: index.php");
             exit(0);
         }
 

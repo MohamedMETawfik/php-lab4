@@ -1,10 +1,11 @@
 <?php
 
-$con = mysqli_connect("localhost","root","","user registration");
+$con = mysqli_connect("localhost","root","","user_registration");
 
 if(!$con){
-    die('Connection Fialed'.mysqli_connect_error())
+    die('Connection Fialed'.mysqli_connect_error());
 }
 
+echo "Connectes Successfully";
 
 ?>
