@@ -51,7 +51,6 @@
                                                 <td><?= $user['Email']; ?></td>
                                                 <td><?= $user['Gender']; ?></td>
                                                 <td><?= $user['Mail_Status']; ?></td>
-                                               
                                             </tr>
                                             <?php
                                         }
