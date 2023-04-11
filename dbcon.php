@@ -6,6 +6,6 @@ if(!$con){
     die('Connection Fialed'.mysqli_connect_error());
 }
 
-echo "Connectes Successfully";
+// echo "Connectes Successfully";
 
 ?>

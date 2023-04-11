@@ -1,3 +1,6 @@
+<?php
+    require 'dbcon.php';
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -33,9 +36,31 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                </tr>
+                            <?php 
+                                    $query = "SELECT * FROM registration";
+                                    $query_run = mysqli_query($con, $query);
+
+                                    if(mysqli_num_rows($query_run) > 0)
+                                    {
+                                        foreach($query_run as $user)
+                                        {
+                                            ?>
+                                            <tr>
+                                                <td><?= $user['id']; ?></td>
+                                                <td><?= $user['Name']; ?></td>
+                                                <td><?= $user['Email']; ?></td>
+                                                <td><?= $user['Gender']; ?></td>
+                                                <td><?= $user['Mail_Status']; ?></td>
+                                               
+                                            </tr>
+                                            <?php
+                                        }
+                                    }
+                                    else
+                                    {
+                                        echo "<h5> No Record Found </h5>";
+                                    }
+                                ?>
                             </tbody>
                         </table>
                     </div>
