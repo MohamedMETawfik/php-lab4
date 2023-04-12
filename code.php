@@ -8,7 +8,7 @@
         $email = mysqli_real_escape_string($con, $_POST['email']);
         $gender = mysqli_real_escape_string($con, $_POST['gender']);
         $checkAgree = mysqli_real_escape_string($con, $_POST['checkAgree']);
-        isset($_POST["checkAgree"]) ? "yes" : "no";
+        isset($_POST["checkAgree"]) == 1 ? $checkAgree = "yes" : $checkAgree = "no";
 
         $query = "INSERT INTO registration (Name, Email, Gender ,Mail_Status)
         VALUES ('$name','$email','$gender','$checkAgree')";
